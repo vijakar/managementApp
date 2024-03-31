@@ -1,0 +1,12 @@
+<div class="login">
+<form action="" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <h1>SLIDE TO LOGIN</h1>
+    <label for="">Email:</label>
+    <input type="email" placeholder="Email" formControlName="email">
+    <br>
+    <label for="">Password:</label>
+    <input type="password" placeholder="Password" formControlName="password">
+    <br>
+    <button type="submit" class="btn btn-warning">Login</button>
+</form>
+</div>

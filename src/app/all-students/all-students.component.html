@@ -1,0 +1,117 @@
+<div class="top">
+    <label for="">FilterBy:</label>
+    <input type="text" (keydown)="getFiltered()" [(ngModel)]="filteredString">
+    <label class="sort" (click)="sorted()">Sort <i class="fa-solid fa-arrow-up"></i> <i
+            class="fa-solid fa-arrow-down"></i></label>
+    <label for="">Pagination:</label>
+    <select name="" id="" (change)="getPage()" [(ngModel)]="pageNo">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+</div>
+<table class="table table-bordered">
+    <thead style="text-align: center;">
+        <tr>
+            <th rowspan="2">Id</th>
+            <th rowspan="2">Name</th>
+            <th rowspan="2">Gender</th>
+            <th rowspan="2">Phone</th>
+            <th rowspan="2">Batch</th>
+            <th colspan="2">Address</th>
+            <th rowspan="2">CompanyName</th>
+            <th rowspan="2">Package</th>
+            <th rowspan="2">Action</th>
+        </tr>
+        <tr>
+            <th>District</th>
+            <th>State</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentData">
+            <td>{{student.id}}</td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.name">
+                </div>
+                <div *ngIf="!student.isEdit">
+                {{student.name}}
+            </div>
+             </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.gender">
+                </div>
+                <div *ngIf="!student.isEdit">
+                {{student.gender}}
+            </div>
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.mobile">
+                </div>
+                <div *ngIf="!student.isEdit">
+                {{student.mobile}}
+            </div>
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.batch">
+                </div>
+                <div *ngIf="!student.isEdit">
+                    {{student.batch}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.address.district">
+                </div>
+        <div *ngIf="!student.isEdit">
+             {{student.address.district}}
+        </div>
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.address.state">
+                </div>
+                <div *ngIf="!student.isEdit">
+                {{student.address.state}}
+            </div>
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text"[(ngModel)]="student.company.name">
+                </div>
+                <div *ngIf="!student.isEdit">
+
+                    {{student.company.name}}
+
+                </div>
+            
+            </td>
+            <td>
+                <div *ngIf="student.isEdit">
+                    <input type="text" [(ngModel)]="student.company.package">
+                </div>
+
+                <div *ngIf="!student.isEdit">
+                {{student.company.package}}
+            </div>
+            </td>
+            <td class="action"><button class="btn btn-primary" style="margin-right: 5px;" (click)="editName(student)">Edit</button> <button class="btn btn-danger" (click)="delete(student.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator> -->
+
+
+<!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->

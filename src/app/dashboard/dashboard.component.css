@@ -1,0 +1,29 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+.left{
+    box-shadow: 0px 0px 10px 0px black;
+    background-color: teal;
+    width: 20vw;
+    text-align: center;
+    padding-top: 25px;
+}
+h1{
+    font-size: 2vw;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.right{
+    width: 80vw;
+    padding:0px 25px;
+    
+}
+
+::placeholder{
+    color:red;
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color:rgba(0,0,0,0.5);
+    background-image: url("/assets/login-image.jpg");
+    background-size: cover;
+
+}
+h1{
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 30px;
+    
+}
+form{
+    padding: 25px 35px;
+    box-shadow: 0px 8px 15px 0px black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+input{
+    padding:5px 5px;
+    outline: none;
+}
+label{
+    display: inline-block;
+    width: 120px;
+    margin-top: 25px;
+    color: white;
+    font-size: 20px;
+}
+button{
+    margin-left: 120px;
+    margin-top: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+

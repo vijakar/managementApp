@@ -1,0 +1,27 @@
+.top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.top label{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.sort{
+    cursor: pointer;
+    margin-right: 30px;
+
+}
+.sort:hover{
+    color:blue;
+}
+input{
+    outline: none;
+    
+}
+
+.action{
+    display: flex;
+}
+button{
+    cursor: pointer;
+}
